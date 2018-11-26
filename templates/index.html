@@ -35,14 +35,14 @@
 		</div>
 		<div class="register w3layouts agileits">
 			<h2>注 册</h2>
-			<form action="/index" method="post">
+			<form  action="/index" method="post">
 				<input type="text" Name="Name" placeholder="用户名" required="required">
 
 				<input type="password" Name="Password1" placeholder="密码" required="required">
 				<input type="password" Name="Password2" placeholder="密码确认" required="required">
 
                 <div class="send-button w3layouts agileits">
-                        <input type="submit" value="注册">
+                        <input id="register_from" type="submit" value="注册">
                         <span style="color: firebrick">&nbsp;{{ ig2 }}</span>
                 </div>
             </form>
@@ -53,6 +53,28 @@
 
 	</div>
 
+<script src="../static/jquery-3.3.1.min.js"></script>
+{#<script>#}
+{#    $(function () {#}
+{#        $(#register_from).click(function () {#}
+{#            $.ajax({#}
+{##}
+{##}
+{##}
+{#                #}
+{#            })#}
+{##}
+{#        })#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#    })#}
+{##}
+{##}
+{##}
+{#</script>#}
 
 </body>
 <!-- //Body -->
