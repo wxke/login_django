@@ -24,6 +24,7 @@
 		<div class="login w3layouts agileits">
 			<h2>登 录</h2>
 			<form action="/home" method="post">
+                {% csrf_token %}
 				<input type="text" Name="Username" placeholder="用户名" required="required">
 				<input type="password" Name="Password" placeholder="密码" required="required">
                 <div class="send-button w3layouts agileits">
@@ -36,10 +37,10 @@
 		<div class="register w3layouts agileits">
 			<h2 id="reg">注 册</h2>
 
-				<input id="username_reg" type="text" Name="Name" placeholder="用户名" >
+				<input id="username_reg" type="text" Name="Name" placeholder="用户名" required="required">
 
-				<input id="password_reg" type="password" Name="Password1" placeholder="密码" >
-				<input id="password_reg1" type="password" Name="Password2" placeholder="密码确认" >
+				<input id="password_reg" type="password" Name="Password1" placeholder="密码" required="required">
+				<input id="password_reg1" type="password" Name="Password2" placeholder="密码确认" required="required">
 
                 <div class="send-button w3layouts agileits">
                         <input id="register_from" type="submit" value="注册">
@@ -57,6 +58,12 @@
 <script>
     $(function () {
         $('#register_from').click(function () {
+            $.ajaxSetup({
+                beforeSend:function (xhr,settings) {
+                    xhr.setRequestHeader('X-CSRFtoken',$.cookie('csrftoken'));
+
+                }
+            });
             $.ajax({
                 url:'/index',
                 type:'post',
