@@ -55,6 +55,7 @@ def home(request):
         #     return render(request,'home.html',{'name':request.COOKIES.get('username')})
         # return redirect('/index')
 
+@csrf_exempt
 def manage(request):
     if request.method == 'POST':
 
