@@ -1,0 +1,180 @@
+        .top_info {
+            zoom : 0;
+            width: 100%;
+            height: 55px;
+            background-color: cornflowerblue;
+
+        }
+        .top_text{
+            zoom : 0;
+            width: 100%;
+            height: 55px;
+
+        }
+        .menu_info {
+            width: 200px;
+            /*position: absolute;*/
+            position:fixed;
+            top: 55px;
+            bottom: 0;
+            z-index: 2;
+            color: white;
+            /*background-color: grey;*/
+            background: rgba(80,80,80);
+        }
+
+        .root_info {
+            float: right;
+            margin-top: 15px;
+            color: white;
+            font-size: larger;
+        }
+
+        .cancel {
+            margin-left: 10px;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        ul {
+            margin-top: 0;
+            color: #f2f2f5;
+            font-size: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+        li {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .book {
+            width: 200px;
+            /*background-color: #5F81ED;*/
+            /*background-color: grey;*/
+
+        }
+
+        .user {
+            width: 200px;
+            /*background-color: #5F81ED;*/
+            /*background-color: grey;*/
+        }
+
+        h1 {
+            cursor: pointer;
+            font-size: 30px;
+            margin-top: 0;
+            width: 200px;
+
+        }
+
+        h3 {
+            margin-top: 0;
+            text-align: center;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .hide {
+            display: none;
+        }
+        .clear{
+            clear:both
+        }
+        .menu_background_info{
+            /*position: absolute;*/
+            position:fixed;
+            /*background: #ff164a;*/
+            opacity: 0.5;
+            top: 55px;
+            bottom: 0;
+            left: 200px;
+            right: 0;
+            z-index: 0;
+
+        }
+        .content{
+            /*position: absolute;*/
+            position:fixed;
+            top: 55px;
+            bottom: 0;
+            left: 200px;
+            right: 0;
+            z-index: 1;
+            background:rgba(80,80,80,0.5);
+        }
+        .find-book{
+            /*position: absolute;*/
+            position:fixed;
+            top: 100px;
+            left: 400px;
+            right: 100px;
+        }
+        .look_user{
+            /*position: absolute;*/
+            position:fixed;
+            top: 100px;
+            left: 400px;
+            right: 100px;
+        }
+        .book_table
+        {
+            color: white;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            right: 100px;
+            bottom: 0px;
+            font-size:larger;
+            overflow:auto;
+            border:1px dashed #B3B5B4;
+        }
+        #exampleInputFile{
+            position:fixed;
+            /*position: absolute;*/
+            top: 300px;
+            left: 400px;
+            right: 100px;
+            border: 1px solid #ccc;
+            background-color: white;
+            height: 34px;
+            font-size: 20px;
+        }
+        .title{
+            position:fixed;
+             /*position: absolute;*/
+            top: 100px;
+            left: 400px;
+            right: 100px;
+            border: 1px solid #ccc;
+            background-color: white;
+            height: 34px;
+            font-size: 20px;
+            width: 380px;
+        }
+        .auth{
+            width: 380px;
+            position:fixed;
+            /*position: absolute;*/
+            top: 200px;
+            left: 400px;
+            right: 100px;
+            border: 1px solid #ccc;
+            background-color: white;
+            height: 34px;
+            font-size: 20px;
+        }
+        .sub{
+            position:fixed;
+            /*position: absolute;*/
+            width: 200px;
+            top: 400px;
+            left: 500px;
+
+        }

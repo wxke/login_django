@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/1.css" />
+
+</head>
+<body style="margin: 0;background-image: url(../static/1.jpg);background-size:100%;">
+<div class='top_info'>
+    <div class="top_text">
+        <div class="root_info cancel">
+            <span>
+                <a href="/cancel" >注销</a>
+            </span>
+        </div>
+        <div class="root_info">
+            <span >
+                你好，{{ name }}
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="menu_info">
+    <div id="book_event">
+        <h1>图书</h1>
+        <div class="book">
+            <h3 id="list_1">查找书籍</h3>
+            <h3 id="list_2">加入书籍</h3>
+        </div>
+    </div>
+    <div id="user_event">
+        <h1>用户管理</h1>
+        <div class="user hide">
+
+            <h3 id="list_3">查看用户</h3>
+            <h3 id="list_4">添加管理员用户</h3>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="menu_background_info">
+</div>
+<div class="content">
+    <div id="1" class="">
+        <div class="find-book">
+        <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for..." id="book_name" required="required">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="find">查找</button>
+          </span>
+        </div>
+        </div>
+        </div>
+
+        <div class="book_table">
+           <table class="table">
+                <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>书名</th>
+                      <th>作家</th>
+                      <th>加入日期</th>
+                    </tr>
+                </thead>
+               <tbody id="book_success"> {{ str1 | safe }}
+               </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="2" class="hide">
+        <form action="/manage" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" placeholder="书名" class="title"  name="title1" required="required">
+            <input type="text" placeholder="作家" class="auth"  name="auth1" required="required">
+            <input type="file" id="exampleInputFile"  name="file">
+            <button type="submit" class="btn btn-default sub">Submit</button>
+        </form>
+    </div>
+    <div id="3" class="hide">
+        <div class="look_user">
+            <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." id="username" required="required">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="find_user">查找</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="book_table">
+       <table class="table">
+            <thead>
+                <tr>
+                  <th>#</th>
+                  <th>用户名</th>
+                  <th>id</th>
+                  <th>类型</th>
+                </tr>
+            </thead>
+           <tbody id="user_success"> {{ str2 |safe }}
+           </tbody>
+        </table>
+    </div>
+    </div>
+    <div id="4" class="hide">
+        <form action="/manage" method="post" >
+            {% csrf_token %}
+            <input type="text" placeholder="账号" class="title"  name="user" required="required">
+            <input type="password" placeholder="密码" class="auth"  name="password" required="required">
+            <input type="text" name="type_user" class="hide" value="1">
+            <button type="submit" class="btn btn-default sub">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="clear"></div>
+</body>
+<script src="../static/jquery-3.3.1.min.js"></script>
+<script src="../static/1.js"></script>
+
+</html>
